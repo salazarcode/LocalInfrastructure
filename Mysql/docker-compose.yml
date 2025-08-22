@@ -4,15 +4,15 @@ services:
     container_name: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: ab23cd57e*.
       MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
+      MYSQL_USER: andres
+      MYSQL_PASSWORD: Java***174
     ports:
-      - "3306:3306"
+      - "3310:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-
+      - ./init-user.sh:/docker-entrypoint-initdb.d/init-user.sh:ro
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
